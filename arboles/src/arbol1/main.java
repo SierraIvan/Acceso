@@ -10,7 +10,6 @@ public class main {
 		arbol.addElem(1);
 		arbol.addElem(2);
 		arbol.addElem(7);
-		arbol.addElem(9);
 
 		
 		System.out.println(arbol.shearchElem(9));
