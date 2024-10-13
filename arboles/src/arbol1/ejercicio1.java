@@ -116,6 +116,44 @@ class ejercicio1 {
     	return 1 + num1 + num2;
     }
     
+    
+    //Metodo que cuenta hojas
+    
+    public int cuentaHojas() {
+    	return cuentaHojasRec(root);
+    	
+    }
+    
+    public int cuentaHojasRec(Node current) {
+    	if(current == null) {
+    		return 0;
+    	}
+    	
+    	if (current.left == null && current.right == null) {
+            return 1;
+        }
+    	
+    	 return cuentaHojasRec(current.left) + cuentaHojasRec(current.right);
+    	
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     // Métodos de eliminación de nodos
     public void delete(int value) {
         root = deleteRecursive(root, value);

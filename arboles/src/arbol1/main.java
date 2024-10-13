@@ -17,6 +17,7 @@ public class main {
 		System.out.println(arbol.altura());
 		System.out.println(arbol.maximo());
 		System.out.println(arbol.cuenta());
+		System.out.println(arbol.cuentaHojas());
 
 	}
 
