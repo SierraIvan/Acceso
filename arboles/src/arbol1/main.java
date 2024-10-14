@@ -6,10 +6,10 @@ public class main {
 		
 		ejercicio1 arbol = new ejercicio1();
 		
+		arbol.addElem(3);
 		arbol.addElem(4);
-		arbol.addElem(1);
+		arbol.addElem(3);
 		arbol.addElem(2);
-		arbol.addElem(7);
 
 		
 		System.out.println(arbol.shearchElem(9));
@@ -18,6 +18,8 @@ public class main {
 		System.out.println(arbol.maximo());
 		System.out.println(arbol.cuenta());
 		System.out.println(arbol.cuentaHojas());
+		System.out.println(arbol.suma());
+		System.out.println(arbol.sumaPar());
 
 	}
 

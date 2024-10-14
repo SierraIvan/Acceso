@@ -53,7 +53,6 @@ class ejercicio1 {
             return true;
         }
         
-        // Si el nodo tiene solo un hijo, no es estricto
         if ((current.left == null && current.right != null) || (current.left != null && current.right == null)) {
             return false;
         }
@@ -69,10 +68,9 @@ class ejercicio1 {
    
     private int alturaRec(Node current) {
         if (current == null) {
-            return 0; // Si el nodo es nulo, la altura es 0
+            return 0; 
         }
-
-        // Calcular la altura de las ramas izquierda y derecha
+        
         int alturaIzquierda = alturaRec(current.left);
         int alturaDerecha = alturaRec(current.right);
 
@@ -110,10 +108,7 @@ class ejercicio1 {
     	if(current == null)
     		return 0;
     	
-    	int num1 = cuentaRec(current.left);
-    	int num2 = cuentaRec(current.right);
-    	
-    	return 1 + num1 + num2;
+    	return 1 + cuentaRec(current.left) + cuentaRec(current.right);
     }
     
     
@@ -123,7 +118,6 @@ class ejercicio1 {
     	return cuentaHojasRec(root);
     	
     }
-    
     public int cuentaHojasRec(Node current) {
     	if(current == null) {
     		return 0;
@@ -136,6 +130,41 @@ class ejercicio1 {
     	 return cuentaHojasRec(current.left) + cuentaHojasRec(current.right);
     	
     }
+    
+   //metodo para sumar los nodos
+    
+    public int suma() {
+    	return sumaRec(root);
+    }
+    
+    public int sumaRec(Node current) {
+    	
+       	if(current == null)
+    		return 0;
+       	
+       	return current.value + sumaRec(current.left) + sumaRec(current.right);
+    }
+    
+    
+    //metodo para sumar pares
+    
+    public int sumaPar() {
+    	return sumaParRec(root);
+    }
+    
+    public int sumaParRec(Node current) {
+    	
+    	if(current == null)
+    		return 0;
+       	
+    	if(current.value % 2 == 0) {
+    		return current.value + sumaParRec(current.left) + sumaParRec(current.right);
+    	}
+    		
+    	
+       	return sumaParRec(current.left) + sumaParRec(current.right);
+    }
+    
     
     
     
