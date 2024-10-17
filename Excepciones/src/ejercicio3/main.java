@@ -35,7 +35,7 @@ public class main {
 			tabla[num1][num2] = valor;
 			System.out.println("Matriz actualizada");
 		}catch(ArrayIndexOutOfBoundsException e) {
-			System.err.println("No esta dentro del rango");
+			System.err.println("No esta dentro del rango (0-3)");
 			
 		}
 		
