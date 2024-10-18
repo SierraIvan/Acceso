@@ -8,7 +8,7 @@ public class main {
 		
 		arbol.addElem(3);
 		arbol.addElem(4);
-		arbol.addElem(3);
+		arbol.addElem(7);
 		arbol.addElem(2);
 
 		

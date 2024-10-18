@@ -89,12 +89,10 @@ class ejercicio1 {
     		return -1;
     	}
     	
-    	if(current.right == null) {
-    		return current.value;
-    	}
-    	
-    	return maximoRec(current.right);
-    	
+    	int maxL = maximoRec(current.left);
+        int maxR = maximoRec(current.right);
+        
+        return Math.max(current.value, Math.max(maxL, maxR));
     }
     
     
