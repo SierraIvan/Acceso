@@ -60,7 +60,7 @@ class ejercicio1 {
         return estrictoRecu(current.left) && estrictoRecu(current.right);
     }
     
-    //metodo para saber la altura del arbol
+    //Metodo para saber la altura del arbol
     public int altura() {
         return alturaRec(root);
     }
@@ -74,7 +74,6 @@ class ejercicio1 {
         int alturaIzquierda = alturaRec(current.left);
         int alturaDerecha = alturaRec(current.right);
 
-        // La altura del nodo actual será 1 más el máximo entre ambas alturas
         return 1 + Math.max(alturaIzquierda, alturaDerecha);
     }
     
@@ -88,11 +87,8 @@ class ejercicio1 {
     	if(current == null) {
     		return -1;
     	}
-    	
-    	int maxL = maximoRec(current.left);
-        int maxR = maximoRec(current.right);
         
-        return Math.max(current.value, Math.max(maxL, maxR));
+        return Math.max(current.value, Math.max(maximoRec(current.left), maximoRec(current.right)));
     }
     
     
@@ -164,6 +160,21 @@ class ejercicio1 {
     }
     
     
+    public boolean isIdentical ( ejercicio1 other ) {
+    	 return isIdenticalRec ( this.root , other.root ) ;
+    	 }
+    
+    private boolean isIdenticalRec(Node nodo,Node nodo2){
+    	if(nodo == null && nodo2 == null) {
+    		return true;
+    	}
+    	if(nodo == null || nodo2 == null) {
+    		return false;
+    	}
+    	
+    	return (nodo.value == nodo2.value)&& isIdenticalRec(nodo.left,nodo2.left) && isIdenticalRec(nodo.right,nodo2.right);
+    	
+    }
     
     
     
