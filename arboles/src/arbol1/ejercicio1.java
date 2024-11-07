@@ -48,7 +48,7 @@ class ejercicio1 {
     	return estrictoRecu(root);
     }
     
-    private boolean estrictoRecu(Node current) {
+    public boolean estrictoRecu(Node current) {
         if (current == null) {
             return true;
         }
@@ -175,10 +175,6 @@ class ejercicio1 {
     	return (nodo.value == nodo2.value)&& isIdenticalRec(nodo.left,nodo2.left) && isIdenticalRec(nodo.right,nodo2.right);
     	
     }
-    
-    
-    
-    
     
     
     
